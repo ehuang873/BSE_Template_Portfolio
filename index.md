@@ -1,7 +1,7 @@
-﻿# Project Name/Title Goes Here
-This will serve as a brief description of your project. Limit this to three sentences because it can become overly long at that point. This copy should draw the user in and make she/him want to read more.
+﻿# Sun Tracker Solar Powered Phone Charger
+ This solar powered phone charger uses the Sun to power a battery and charge a phone. However, it can also track the movements of the Sun and will tilt towards the Sun like a sunflower. 
 
-| **Engineer** | **School** | **Area of Interest** | **Grade** |
+| **Eric Huang** | **Lynbrook High School** | **Electrical Engineering** | **Incoming Sophomore** |
 |:--:|:--:|:--:|:--:|
 | Firstname Lastname | Current Highschool | Electrical Engineering | Incoming Senior
 
