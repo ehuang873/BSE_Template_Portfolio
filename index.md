@@ -21,4 +21,4 @@ My final milestone is the increased reliability and accuracy of my robot. I amel
 My first milestone is hooking up the servo to the arduino. This is a large part of my project as it uses the gears to reposition the swivel of the solar panels to catch the most sunlight possible. I hooked it up to the arduino and made sure that it worked, writing a sample code to test out the motors. 
   
 
-[![First Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1624630671/video_to_markdown/images/youtube--lRqF1uRTP9g-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=lRqF1uRTP9g ""))](https://www.youtube.com/watch?time_continue=71&v=lRqF1uRTP9g&feature=emb_title){:target="_blank" rel="noopener"}
+[![First Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1624630671/video_to_markdown/images/youtube--lRqF1uRTP9g-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=lRqF1uRTP9g ""))](){:target="_blank" rel="noopener"}
