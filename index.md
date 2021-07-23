@@ -25,54 +25,57 @@ My first milestone is hooking up the servo to the arduino. This is a large part 
 <img width="559" alt="Screen Shot 2021-07-23 at 7 00 51 AM" src="https://user-images.githubusercontent.com/86114139/126793076-ff06d035-94c0-4405-9c20-e6948db062e6.png">
 
 # Code
+<pre>
 
-#include <Servo.h>
+<font color="#5e6d03">#include</font> <font color="#434f54">&lt;</font><b><font color="#d35400">Servo</font></b><font color="#434f54">.</font><font color="#000000">h</font><font color="#434f54">&gt;</font>
 
-Servo servo;   // Create a servo object to control the servo
-int eLDRPin = A0; // Assign pins to the LDR's
-int wLDRPin = A1;
-int eastLDR = 0; //Create variables to store to LDR readings
-int westLDR = 0;
-int difference = 0; //Create a variable to compare the two LDR's
-int error = 10;  // Variable for is there is a noticable difference between the tow LDR's
-int servoSet = 80; //Variable for position of servo - will be different for each device
-
-
-void setup() {
-  servo.attach(9);   //attaches the servo object to PWM pin 9
-  Serial.begin(9600); 
-}
-
-void loop() {
-  eastLDR = analogRead(wLDRPin); //Read the LDR values
-  westLDR = analogRead(eLDRPin);
+<b><font color="#d35400">Servo</font></b> <font color="#000000">servo</font><font color="#000000">;</font> &nbsp;&nbsp;<font color="#434f54">&#47;&#47; Create a servo object to control the servo</font>
+<font color="#00979c">int</font> <font color="#000000">eLDRPin</font> <font color="#434f54">=</font> <font color="#000000">A0</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47; Assign pins to the LDR&#39;s</font>
+<font color="#00979c">int</font> <font color="#000000">wLDRPin</font> <font color="#434f54">=</font> <font color="#000000">A1</font><font color="#000000">;</font>
+<font color="#00979c">int</font> <font color="#000000">eastLDR</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47;Create variables to store to LDR readings</font>
+<font color="#00979c">int</font> <font color="#000000">westLDR</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font>
+<font color="#00979c">int</font> <font color="#000000">difference</font> <font color="#434f54">=</font> <font color="#000000">0</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47;Create a variable to compare the two LDR&#39;s</font>
+<font color="#00979c">int</font> <font color="#000000">error</font> <font color="#434f54">=</font> <font color="#000000">10</font><font color="#000000">;</font> &nbsp;<font color="#434f54">&#47;&#47; Variable for is there is a noticable difference between the tow LDR&#39;s</font>
+<font color="#00979c">int</font> <font color="#000000">servoSet</font> <font color="#434f54">=</font> <font color="#000000">80</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47;Variable for position of servo - will be different for each device</font>
 
 
-  difference = eastLDR - westLDR ; //Check the difference 
-  if (difference > 10) {          //Send the panel towards the LDR with a higher reading
-    if (servoSet <= 140) {
-      servoSet ++;
-      servo.write(servoSet);
-    }
-  } else if (difference < -10) 
-  {
-    if (servoSet >= 15) {
-      servoSet --;
-      servo.write(servoSet);
-    }
-  }
-  else
-  {
-    servo.write(80);
-  }
-  Serial.print(eastLDR);      //Serial monitor can be useful for debugging/setting up
-  Serial.print("   -   ");    //Use it to see if your LDR's are noticeably different when
-  Serial.print(westLDR);      //They have equal light shining on them, if so, correct with the error value
-  Serial.print("   -   ");
-  Serial.print(difference);   
-  Serial.print("   -   ");
-  Serial.print(servoSet);     //Fine tune the servo settings, to maximise swing available
-  Serial.print("   -   ");
-  Serial.println(".");
-  delay(100);
-}
+<font color="#00979c">void</font> <font color="#5e6d03">setup</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+ &nbsp;<font color="#000000">servo</font><font color="#434f54">.</font><font color="#d35400">attach</font><font color="#000000">(</font><font color="#000000">9</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;&nbsp;<font color="#434f54">&#47;&#47;attaches the servo object to PWM pin 9</font>
+ &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">begin</font><font color="#000000">(</font><font color="#000000">9600</font><font color="#000000">)</font><font color="#000000">;</font> 
+<font color="#000000">}</font>
+
+<font color="#00979c">void</font> <font color="#5e6d03">loop</font><font color="#000000">(</font><font color="#000000">)</font> <font color="#000000">{</font>
+ &nbsp;<font color="#000000">eastLDR</font> <font color="#434f54">=</font> <font color="#d35400">analogRead</font><font color="#000000">(</font><font color="#000000">wLDRPin</font><font color="#000000">)</font><font color="#000000">;</font> <font color="#434f54">&#47;&#47;Read the LDR values</font>
+ &nbsp;<font color="#000000">westLDR</font> <font color="#434f54">=</font> <font color="#d35400">analogRead</font><font color="#000000">(</font><font color="#000000">eLDRPin</font><font color="#000000">)</font><font color="#000000">;</font>
+
+
+ &nbsp;<font color="#000000">difference</font> <font color="#434f54">=</font> <font color="#000000">eastLDR</font> <font color="#434f54">-</font> <font color="#000000">westLDR</font> <font color="#000000">;</font> <font color="#434f54">&#47;&#47;Check the difference </font>
+ &nbsp;<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#000000">difference</font> <font color="#434f54">&gt;</font> <font color="#000000">10</font><font color="#000000">)</font> <font color="#000000">{</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47;Send the panel towards the LDR with a higher reading</font>
+ &nbsp;&nbsp;&nbsp;<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#000000">servoSet</font> <font color="#434f54">&lt;=</font> <font color="#000000">140</font><font color="#000000">)</font> <font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">servoSet</font> <font color="#434f54">++</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">servo</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">servoSet</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">}</font>
+ &nbsp;<font color="#000000">}</font> <font color="#5e6d03">else</font> <font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#000000">difference</font> <font color="#434f54">&lt;</font> <font color="#434f54">-</font><font color="#000000">10</font><font color="#000000">)</font> 
+ &nbsp;<font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;<font color="#5e6d03">if</font> <font color="#000000">(</font><font color="#000000">servoSet</font> <font color="#434f54">&gt;=</font> <font color="#000000">15</font><font color="#000000">)</font> <font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">servoSet</font> <font color="#434f54">--</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#000000">servo</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">servoSet</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">}</font>
+ &nbsp;<font color="#000000">}</font>
+ &nbsp;<font color="#5e6d03">else</font>
+ &nbsp;<font color="#000000">{</font>
+ &nbsp;&nbsp;&nbsp;<font color="#000000">servo</font><font color="#434f54">.</font><font color="#d35400">write</font><font color="#000000">(</font><font color="#000000">80</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#000000">}</font>
+ &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#000000">eastLDR</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47;Serial monitor can be useful for debugging&#47;setting up</font>
+ &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34; &nbsp;&nbsp;- &nbsp;&nbsp;&#34;</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47;Use it to see if your LDR&#39;s are noticeably different when</font>
+ &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#000000">westLDR</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47;They have equal light shining on them, if so, correct with the error value</font>
+ &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34; &nbsp;&nbsp;- &nbsp;&nbsp;&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#000000">difference</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;&nbsp;
+ &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34; &nbsp;&nbsp;- &nbsp;&nbsp;&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#000000">servoSet</font><font color="#000000">)</font><font color="#000000">;</font> &nbsp;&nbsp;&nbsp;&nbsp;<font color="#434f54">&#47;&#47;Fine tune the servo settings, to maximise swing available</font>
+ &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">print</font><font color="#000000">(</font><font color="#005c5f">&#34; &nbsp;&nbsp;- &nbsp;&nbsp;&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<b><font color="#d35400">Serial</font></b><font color="#434f54">.</font><font color="#d35400">println</font><font color="#000000">(</font><font color="#005c5f">&#34;.&#34;</font><font color="#000000">)</font><font color="#000000">;</font>
+ &nbsp;<font color="#d35400">delay</font><font color="#000000">(</font><font color="#000000">100</font><font color="#000000">)</font><font color="#000000">;</font>
+<font color="#000000">}</font>
+
+</pre>
