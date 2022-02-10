@@ -10,13 +10,15 @@
 # Final Presentation
 [![](https://res.cloudinary.com/marcomontalbano/image/upload/v1627049108/video_to_markdown/images/youtube--MUaXbn2YhGw-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=MUaXbn2YhGw "")
 # Final Milestone
-My final milestone is the increased reliability and accuracy of my robot. I ameliorated the sagging and fixed the reliability of the finger. As discussed in my second milestone, the arm sags because of weight. I put in a block of wood at the base to hold up the upper arm; this has reverberating positive effects throughout the arm. I also realized that the forearm was getting disconnected from the elbow servo’s horn because of the weight stress on the joint. Now, I make sure to constantly tighten the screws at that joint. 
+My final milestone is making sure that the swivel was working properly and that the servo would work with the photo resistors. I hooked up everything and connected my charger to the solar panel. I checked the functionality of the photo resistors and tested it out to see if it could swivel without any problems. Then, I took it outside to test to see if it worked. 
 
-[![Final Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612573869/video_to_markdown/images/youtube--F7M7imOVGug-c05b58ac6eb4c4700831b2b3070cd403.jpg )](https://www.youtube.com/watch?v=F7M7imOVGug&feature=emb_logo "Final Milestone"){:target="_blank" rel="noopener"}
+
+
 
 # Second Milestone
 My second milestone is completing the solar panel connected charger. I clipped off the connector of the solar panel wire and connected it to another head that could connect to my powerboost. The powerboost would take power from my solar panel and my lithium ion battery to output 5 volts of energy to properly charge a phone. 
-[![Third Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1612574014/video_to_markdown/images/youtube--y3VAmNlER5Y-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=y3VAmNlER5Y&feature=emb_logo "Second Milestone"){:target="_blank" rel="noopener"}
+
+
 
 # First Milestone
 My first milestone is hooking up the servo to the arduino. This is a large part of my project as it uses the gears to reposition the swivel of the solar panels to catch the most sunlight possible. I hooked it up to the arduino and made sure that it worked, writing a sample code to test out the motors. 
