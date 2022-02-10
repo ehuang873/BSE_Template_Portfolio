@@ -5,10 +5,11 @@
 |:--:|:--:|:--:|:--:|
 | Eric H | Lynbrook High School | Electrical Engineering | Incoming Sophomore
 
-![Headstone Image](https://bluestampengineering.com/wp-content/uploads/2016/05/improve.jpg)
+![Headstone Image](https://user-images.githubusercontent.com/86114139/153313937-c8513008-1832-405a-bd19-52df02977a36.jpg)
+
 
 # Final Presentation
-[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1627049108/video_to_markdown/images/youtube--MUaXbn2YhGw-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=MUaXbn2YhGw "")
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1627049108/video_to_markdown/images/youtube--MUaXbn2YhGw-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=MUaXbn2YhGw "")!
 # Final Milestone
 My final milestone is making sure that the swivel was working properly and that the servo would work with the photo resistors. I hooked up everything and connected my charger to the solar panel. I checked the functionality of the photo resistors and tested it out to see if it could swivel without any problems. Then, I took it outside to test to see if it worked. 
 
