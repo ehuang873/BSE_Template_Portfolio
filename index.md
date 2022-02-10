@@ -26,7 +26,7 @@ My first milestone is hooking up the servo to the arduino. This is a large part 
 
 [![First Milestone](https://res.cloudinary.com/marcomontalbano/image/upload/v1624630671/video_to_markdown/images/youtube--lRqF1uRTP9g-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=lRqF1uRTP9g ""))](){:target="_blank" rel="noopener"}
 # Circuit Diagram
-<img width="559" alt="Screen Shot 2021-07-23 at 7 00 51 AM" src="file:///Users/erichuang/Downloads/suntracker_bb_4YYw7HZDM9.png">
+<img width="632" alt="Screen Shot 2022-02-09 at 4 16 30 PM" src="https://user-images.githubusercontent.com/86114139/153312577-fd7a7e76-c6e9-4b9d-8a5d-4219b2f1aba9.png">
 
 # Code
 <pre>
